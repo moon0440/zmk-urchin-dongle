@@ -1,0 +1,36 @@
+# Copyright (c) 2022 Duccio Breschi
+# SPDX-License-Identifier: MIT
+
+if SHIELD_DONGLE
+
+# Max 16 characters in keyboard name
+config ZMK_KEYBOARD_NAME
+    default "urchin"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_URCHIN_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "urchinL"
+
+config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_URCHIN_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "urchinR"
+
+config ZMK_SPLIT
+    default y
+
+endif
