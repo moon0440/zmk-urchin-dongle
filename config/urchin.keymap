@@ -85,7 +85,7 @@
 			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 			&kp LESS_THAN &kp PERCENT &kp LEFT_PARENTHESIS &kp LEFT_BRACKET &kp LEFT_BRACE          &kp EQUAL &kp QUESTION &kp SINGLE_QUOTE &kp MINUS &kp ASTERISK
 			&kp GREATER_THAN &kp DOLLAR &kp RIGHT_PARENTHESIS &kp RIGHT_BRACKET &kp RIGHT_BRACE 	&kp AT_SIGN &kp EXCLAMATION &kp DOUBLE_QUOTES &kp PLUS &kp SLASH
-											  &mo FNC  &mo SYM2     &trans &trans
+											  &mo FNC  &mo SYM2     &none &trans
 		>;
         };
 
@@ -94,8 +94,8 @@
 		bindings = <
 			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp HOME  &kp PAGE_DOWN &kp PAGE_UP &kp END &none
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 		&kp LEFT &kp DOWN  &kp UP   &kp RIGHT   &none
-			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &none &kp LC(BSPC) &kp BSPC &trans  &trans
-							&trans &kp LCTRL        &kp ENTER  &mo FNC 
+			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &none &kp LC(BSPC) &kp BSPC &none  &none
+							&none &kp LCTRL        &kp ENTER  &mo FNC 
 		>;
         };
 
@@ -124,8 +124,8 @@
 		bindings = <
 			&studio_unlock    &none    &none    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 3    &none     &unstick    &none    &bootloader
 			&none             &none    &none    &none         &bt BT_SEL 1    &bt BT_SEL 4    &none     &none       &none    &none
-			&none             &none    &none    &none         &bt BT_SEL 2    &bt BT_SEL 5    &none     &none       &none    &trans
-							    &none         &none           &none           &trans
+			&none             &none    &none    &none         &bt BT_SEL 2    &bt BT_SEL 5    &none     &none       &none    &none
+							    &none         &none           &none           &none
 		>;
         };
     };
