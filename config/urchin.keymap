@@ -53,7 +53,27 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
-        };
+        }; 
+	macros {
+	        vi_quit: vi_quit {
+	            compatible = "zmk,behavior-macro";
+	            #binding-cells = <0>;
+	            bindings
+	                = <&macro_tap &kp COLON>
+	                , <&macro_tap &kp Q>
+	                , <&macro_tap &kp ENTER>
+	                ;
+	        }; 
+		vi_save: vi_save {
+	            compatible = "zmk,behavior-macro";
+	            #binding-cells = <0>;
+	            bindings
+	                = <&macro_tap &kp COLON> 
+			, <&macro_tap &kp W>
+	                , <&macro_tap &kp ENTER>
+	                ;
+	        };
+    };
     };
 
     combos {
@@ -92,7 +112,7 @@
         mods_layer {
 		label = "mods";
 		bindings = <
-			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE    	&kp HOME  &kp PAGE_DOWN &kp PAGE_UP &kp END &none
+			&kp ESC  &vi_quit &vi_save  &kp C_NEXT  &kp LC(F)    	&kp HOME  &kp PAGE_DOWN &kp PAGE_UP &kp END &none
 			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 		&kp LEFT &kp DOWN  &kp UP   &kp RIGHT   &none
 			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V)  &kp TAB          &none &kp LC(BSPC) &kp BSPC &none  &none
 							&none &kp LCTRL        &kp ENTER  &mo FNC 
