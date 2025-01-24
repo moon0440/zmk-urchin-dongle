@@ -83,14 +83,21 @@
             key-positions = <1 2>;
             bindings = <&kp LEFT_PARENTHESIS>; 
             layers = <SYM>;
-            slow-release = true;
+            slow-release;
         }; 
         combo_RIGHT_PARENTHESIS {
             timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&kp RIGHT_PARENTHESIS>; 
             layers = <SYM>;
-            slow-release = true;
+            slow-release;
+        };
+        combo_LESS_THAN {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp LESS_THAN>; 
+            layers = <SYM>;
+            slow-release;
         };
 
     };
