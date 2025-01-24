@@ -78,12 +78,21 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_LEFT_PARENTHESIS {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp LEFT_PARENTHESIS>; 
+            layers = <SYM>;
+            slow-release = true;
+        }; 
+        combo_RIGHT_PARENTHESIS {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp RIGHT_PARENTHESIS>; 
+            layers = <SYM>;
+            slow-release = true;
+        };
 
-        // both right thumb keys
-        // internal-left & external-right thumb keys
-        // both left thumb keys
-        // left index & middle fingers (home-row)
-        // hold control & space for Adobe workflow
     };
 
     keymap {
@@ -102,19 +111,19 @@
         sym_layer {
 		label = "sym";
 		bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp LESS_THAN &kp PERCENT &kp LEFT_PARENTHESIS &kp LEFT_BRACKET &kp LEFT_BRACE          &kp EQUAL &kp QUESTION &kp SINGLE_QUOTE &kp MINUS &kp ASTERISK
-			&kp GREATER_THAN &kp DOLLAR &kp RIGHT_PARENTHESIS &kp RIGHT_BRACKET &kp RIGHT_BRACE 	&kp AT_SIGN &kp EXCLAMATION &kp DOUBLE_QUOTES &kp PLUS &kp COLON
-											  &mo FNC  &mo SYM2     &none &none
+			&kp GRAVE &kp LS(GRAVE) &kp CARET &kp COLON &kp SEMICOLON		         &kp PLUS &kp N7 &kp N8 &kp N9 &kp SLASH
+			&kp AT_SIGN &kp PIPE &kp UNDERSCORE &kp MINUS &kp ASTERISK          	         &kp EQUAL &kp N4 &kp N5 &kp N6 &kp N0
+			&kp PERCENT &kp AMPERSAND &kp HASH &kp SINGLE_QUOTE &kp DOUBLE_QUOTES 	         &kp MINUS &kp N1 &kp N2 &kp N3 &kp DOT 
+								&mo FNC  &mo SYM2                        &none &none
 		>;
         };
 
         mods_layer {
 		label = "mods";
 		bindings = <
-			&kp ESC  &vi_quit &vi_save  &none  &kp LC(F)    	&kp HOME  &kp PAGE_DOWN &kp PAGE_UP &kp END &none
-			&sk LALT &sk LGUI  &kp TAB  &sk LCTRL  &kp RALT 		&kp LEFT &kp DOWN  &kp UP   &kp RIGHT   &none
-			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V)  &none          &none &kp LC(BSPC) &kp BSPC &kp DELETE  &none
+			&kp BSPC  &vi_quit &vi_save  &none  &kp LC(F)    	&kp HOME  &kp PAGE_DOWN &kp PAGE_UP &kp END &none
+			&sk LALT &sk LGUI  &kp TAB  &kp ESC  &kp LCTRL 		&kp LEFT &kp DOWN  &kp UP   &kp RIGHT   &none
+			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(A)      &kp LA(BSPC) &kp LC(BSPC) &kp BSPC &kp DELETE  &none
 							&none &kp LCTRL        &kp ENTER  &mo FNC 
 		>;
         };
@@ -122,10 +131,10 @@
         fnc_layer {
 		label = "fnc";
 		bindings = <
-			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-			&studio_unlock &none &none &none &none		    &none &none &none &none &studio_unlock
-							  &none &none       &none &none  
+			&studio_unlock &none &bt BT_CLR &none &none               &kp F12 &kp F7 &kp F8 &kp F9 &kp PRINTSCREEN
+			&none &none &none &none &none                             &kp F11 &kp F4 &kp F5 &kp F6 &none &none
+			&bootloader &none &none &none &none	                  &kp F10  &kp F1 &kp F2 &kp F3 &bootloader
+					    &none &none                           &none &none  
 		>;
         };
 
