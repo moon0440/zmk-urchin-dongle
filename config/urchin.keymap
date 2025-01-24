@@ -99,6 +99,41 @@
             layers = <SYM>;
             slow-release;
         };
+        combo_LEFT_BRACKET {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp LEFT_BRACKET>; 
+            layers = <SYM>;
+            slow-release;
+        }; 
+        combo_RIGHT_BRACKET {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp RIGHT_BRACKET>; 
+            layers = <SYM>;
+            slow-release;
+        };
+        combo_GREATER_THAN {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp GREATER_THAN>; 
+            layers = <SYM>;
+            slow-release;
+        };
+        combo_LEFT_BRACE {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LEFT_BRACE>; 
+            layers = <SYM>;
+            slow-release;
+        };
+        combo_RIGHT_BRACE {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp RIGHT_BRACE>; 
+            layers = <SYM>;
+            slow-release;
+        };
 
     };
 
