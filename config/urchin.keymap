@@ -164,7 +164,7 @@
 		label = "mods";
 		bindings = <
 			&kp BSPC  &vi_quit &vi_save  &none  &kp LC(F)    	&kp HOME  &kp PAGE_DOWN &kp PAGE_UP &kp END &none
-			&sk LALT &sk LGUI  &kp TAB  &kp ESC  &kp LCTRL 		&kp LEFT &kp DOWN  &kp UP   &kp RIGHT   &none
+			&sk LALT &sk LGUI  &kp TAB  &kp ESC  &sk LCTRL 		&kp LEFT &kp DOWN  &kp UP   &kp RIGHT   &none
 			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(A)      &kp LA(BSPC) &kp LC(BSPC) &kp BSPC &kp DELETE  &none
 							&none &kp LCTRL        &kp ENTER  &mo FNC 
 		>;
