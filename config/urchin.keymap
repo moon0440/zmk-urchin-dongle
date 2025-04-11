@@ -98,7 +98,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         }; 
-	macros {
 	        vi_quit: vi_quit {
 	            compatible = "zmk,behavior-macro";
 	            #binding-cells = <0>;
@@ -117,7 +116,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 	                , <&macro_tap &kp ENTER>
 	                ;
 	        };
-    };
     };
 
     combos {
@@ -188,7 +186,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 		label = "base";
 		bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-		   &kp Q         &kp W        &kp E         &kp R         &kp T           &kp Y         &kp U         &kp I         &kp O         &kp SEMICOLON 
+		   &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y         &kp U         &kp I         &kp O         &kp SEMICOLON 
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
 		   &hml LGUI A   &hml LALT S   &hml LCTRL D  &hml LSHFT F        &kp G     &kp H         &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L   &hmr LGUI P
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
